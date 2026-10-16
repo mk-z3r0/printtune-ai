@@ -1,0 +1,197 @@
+{
+  "schema_version": "0.1",
+  "status": "hypothesis_library",
+  "defects": [
+    {
+      "id": "ringing",
+      "visual_signs": [
+        "fading repeated ripples after sharp corners"
+      ],
+      "hypotheses": [
+        "motion_resonance",
+        "high_acceleration",
+        "loose_hardware"
+      ],
+      "check": [
+        "accelerometer_resonance",
+        "belt_and_pulley_inspection"
+      ],
+      "scope": "machine"
+    },
+    {
+      "id": "corner_bulging",
+      "visual_signs": [
+        "swollen outside corners"
+      ],
+      "hypotheses": [
+        "low_pressure_advance",
+        "excess_flow",
+        "cooling"
+      ],
+      "check": [
+        "effective_pa_source",
+        "straight_wall_comparison"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "corner_gaps",
+      "visual_signs": [
+        "gaps after corners"
+      ],
+      "hypotheses": [
+        "high_pressure_advance",
+        "extrusion_lag",
+        "volumetric_limit"
+      ],
+      "check": [
+        "line_start_end_comparison",
+        "speed_flow"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "under_extrusion",
+      "visual_signs": [
+        "missing lines or wall gaps"
+      ],
+      "hypotheses": [
+        "partial_clog",
+        "extruder_slip",
+        "volumetric_limit",
+        "low_temperature"
+      ],
+      "check": [
+        "speed_dependence",
+        "extruder_inspection"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "over_extrusion",
+      "visual_signs": [
+        "raised top surface ridges"
+      ],
+      "hypotheses": [
+        "excess_flow",
+        "incorrect_extrusion_calibration"
+      ],
+      "check": [
+        "slicer_flow",
+        "extruder_calibration"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "stringing",
+      "visual_signs": [
+        "fine strands across gaps"
+      ],
+      "hypotheses": [
+        "wet_filament",
+        "temperature",
+        "retraction",
+        "travel"
+      ],
+      "check": [
+        "drying_history",
+        "retraction_profile"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "warping",
+      "visual_signs": [
+        "lifted corners"
+      ],
+      "hypotheses": [
+        "bed_adhesion",
+        "thermal_contraction",
+        "chamber_conditions"
+      ],
+      "check": [
+        "bed_and_chamber_temperatures",
+        "first_layer"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "layer_shift",
+      "visual_signs": [
+        "abrupt XY offset"
+      ],
+      "hypotheses": [
+        "belt_slip",
+        "collision",
+        "missed_steps"
+      ],
+      "check": [
+        "mechanical_inspection"
+      ],
+      "scope": "machine"
+    },
+    {
+      "id": "poor_bridging",
+      "visual_signs": [
+        "drooping unsupported spans"
+      ],
+      "hypotheses": [
+        "cooling",
+        "bridge_speed",
+        "bridge_flow",
+        "temperature"
+      ],
+      "check": [
+        "bridge_only_comparison"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "layer_splitting",
+      "visual_signs": [
+        "cracks between layers"
+      ],
+      "hypotheses": [
+        "poor_thermal_bonding",
+        "excess_cooling",
+        "chamber_conditions"
+      ],
+      "check": [
+        "material_temperature_history"
+      ],
+      "scope": "material"
+    },
+    {
+      "id": "z_banding",
+      "visual_signs": [
+        "periodic horizontal stripes"
+      ],
+      "hypotheses": [
+        "z_mechanics",
+        "extrusion_periodicity",
+        "temperature_variation"
+      ],
+      "check": [
+        "band_spacing",
+        "z_drive_inspection"
+      ],
+      "scope": "machine"
+    },
+    {
+      "id": "first_layer_defect",
+      "visual_signs": [
+        "first layer gaps or squashed ridges"
+      ],
+      "hypotheses": [
+        "z_offset",
+        "bed_mesh",
+        "flow",
+        "surface_preparation"
+      ],
+      "check": [
+        "first_layer_across_bed"
+      ],
+      "scope": "mixed"
+    }
+  ]
+}
