@@ -5,7 +5,10 @@ from fastapi import FastAPI, HTTPException
 
 from .moonraker import MoonrakerClient
 
+from .vision_api import router as vision_router
+
 app = FastAPI(title="PrintTune AI", version="0.1.0")
+app.include_router(vision_router)
 
 
 @app.get("/api/health")
